@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9rh-kW-pYO">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location DetailsVC-->
+        <scene sceneID="3zD-f2-Fby">
+            <objects>
+                <viewController id="9rh-kW-pYO" customClass="LocationDetailsVC" customModule="SparkSupportMachineTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EyZ-UT-01r">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f8O-jl-CzM">
+                                <rect key="frame" x="16" y="59" width="361" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="l7e-UM-Uft"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Map View"/>
+                                    <segment title="Pin Points"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlMapViewAndPinPointsChanged:" destination="9rh-kW-pYO" eventType="valueChanged" id="au2-DR-88U"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5DQ-lI-8PQ">
+                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDQ-76-gHQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kR3-Wr-5NX">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="128" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fMa-Fw-Xdy" customClass="SelfSizedTableView" customModule="SparkSupportMachineTest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Vpo-hL-30r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Pin Points Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guk-T8-5XN">
+                                                                <rect key="frame" x="112" y="-10" width="169" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="B6L-8x-bwH"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="guk-T8-5XN" firstAttribute="centerY" secondItem="Vpo-hL-30r" secondAttribute="centerY" id="R1L-ei-AgD"/>
+                                                            <constraint firstItem="guk-T8-5XN" firstAttribute="centerX" secondItem="Vpo-hL-30r" secondAttribute="centerX" id="fkU-jc-dWI"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kR3-Wr-5NX" secondAttribute="trailing" id="Dnn-ub-DKs"/>
+                                            <constraint firstItem="kR3-Wr-5NX" firstAttribute="top" secondItem="mDQ-76-gHQ" secondAttribute="top" id="JCc-vE-Dtq"/>
+                                            <constraint firstAttribute="bottom" secondItem="kR3-Wr-5NX" secondAttribute="bottom" id="abV-kF-OOq"/>
+                                            <constraint firstItem="kR3-Wr-5NX" firstAttribute="leading" secondItem="mDQ-76-gHQ" secondAttribute="leading" id="nKJ-T5-cgu"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-RE-3g3">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="733"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-ZJ-tgx">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="733"/>
+                                                <standardMapConfiguration key="preferredConfiguration"/>
+                                            </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrI-Sj-O0Y">
+                                                <rect key="frame" x="327" y="637" width="56" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="flT-PF-qhI"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="p5n-BO-pad"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="CurrentLocation"/>
+                                                <connections>
+                                                    <action selector="currentLocationTapped:" destination="9rh-kW-pYO" eventType="touchUpInside" id="aFc-fc-QCB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JrI-Sj-O0Y" secondAttribute="trailing" constant="10" id="3At-vf-Na5"/>
+                                            <constraint firstItem="pqb-ZJ-tgx" firstAttribute="leading" secondItem="bOR-RE-3g3" secondAttribute="leading" id="9C5-4a-vfY"/>
+                                            <constraint firstAttribute="bottom" secondItem="pqb-ZJ-tgx" secondAttribute="bottom" id="Jz1-lY-6PQ"/>
+                                            <constraint firstItem="pqb-ZJ-tgx" firstAttribute="top" secondItem="bOR-RE-3g3" secondAttribute="top" id="Kox-6h-jDL"/>
+                                            <constraint firstAttribute="bottom" secondItem="JrI-Sj-O0Y" secondAttribute="bottom" constant="46" id="YCl-94-CwE"/>
+                                            <constraint firstItem="JrI-Sj-O0Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bOR-RE-3g3" secondAttribute="leading" constant="20" symbolic="YES" id="oVd-6q-WnH"/>
+                                            <constraint firstAttribute="trailing" secondItem="pqb-ZJ-tgx" secondAttribute="trailing" id="yZW-Hv-3IC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="chq-M7-r4e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5DQ-lI-8PQ" firstAttribute="trailing" secondItem="chq-M7-r4e" secondAttribute="trailing" id="00f-CG-mvO"/>
+                            <constraint firstItem="f8O-jl-CzM" firstAttribute="top" secondItem="chq-M7-r4e" secondAttribute="top" id="1ec-dW-e68"/>
+                            <constraint firstItem="5DQ-lI-8PQ" firstAttribute="bottom" secondItem="EyZ-UT-01r" secondAttribute="bottom" id="ZeU-L8-uvx"/>
+                            <constraint firstItem="f8O-jl-CzM" firstAttribute="leading" secondItem="chq-M7-r4e" secondAttribute="leading" constant="16" id="gJV-uW-SFa"/>
+                            <constraint firstItem="5DQ-lI-8PQ" firstAttribute="top" secondItem="f8O-jl-CzM" secondAttribute="bottom" constant="10" id="hKg-7a-l8p"/>
+                            <constraint firstItem="5DQ-lI-8PQ" firstAttribute="leading" secondItem="chq-M7-r4e" secondAttribute="leading" id="pxx-VC-86a"/>
+                            <constraint firstItem="chq-M7-r4e" firstAttribute="trailing" secondItem="f8O-jl-CzM" secondAttribute="trailing" constant="16" id="ubU-hA-yBv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCurrentLocation" destination="JrI-Sj-O0Y" id="kgF-oK-pQE"/>
+                        <outlet property="mapView" destination="pqb-ZJ-tgx" id="rsl-I5-Gsl"/>
+                        <outlet property="segmentControlerMapViewAndPinPoints" destination="f8O-jl-CzM" id="Mw7-15-lgX"/>
+                        <outlet property="tableViewPinPoints" destination="fMa-Fw-Xdy" id="8g0-zY-6Dc"/>
+                        <outlet property="viewMapDetails" destination="bOR-RE-3g3" id="4N0-Ef-AWb"/>
+                        <outlet property="viewNoPinPointsAvailable" destination="Vpo-hL-30r" id="2Lk-Qh-MRO"/>
+                        <outlet property="viewPinPointsDetails" destination="mDQ-76-gHQ" id="1or-hV-nVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2B-xG-lVT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CurrentLocation" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

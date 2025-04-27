@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="PinPointTVC" customModule="AddAndSaveAnotationsUsingAppleMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="936-kN-eOC">
+                        <rect key="frame" x="10" y="10" width="338" height="108"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9w-L5-tp3">
+                                <rect key="frame" x="10" y="10" width="318" height="88"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oXz-jc-0zb">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="88"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wI-oe-aJ6">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="62"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytV-3M-fBl">
+                                                <rect key="frame" x="0.0" y="70" width="268" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTc-Hg-uUu">
+                                        <rect key="frame" x="268" y="0.0" width="50" height="88"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixX-It-xg4">
+                                                <rect key="frame" x="8" y="27" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="4t0-m0-umg"/>
+                                                    <constraint firstAttribute="width" constant="34" id="iJp-N8-L2D"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="DeletePinDetails"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="52m-G2-k8p"/>
+                                            <constraint firstItem="ixX-It-xg4" firstAttribute="centerX" secondItem="bTc-Hg-uUu" secondAttribute="centerX" id="ERu-Ly-jUE"/>
+                                            <constraint firstItem="ixX-It-xg4" firstAttribute="centerY" secondItem="bTc-Hg-uUu" secondAttribute="centerY" id="xcu-xT-Nxg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Z9w-L5-tp3" secondAttribute="trailing" constant="10" id="6ml-Qa-9Iq"/>
+                            <constraint firstItem="Z9w-L5-tp3" firstAttribute="top" secondItem="936-kN-eOC" secondAttribute="top" constant="10" id="AcH-8c-hMU"/>
+                            <constraint firstItem="Z9w-L5-tp3" firstAttribute="leading" secondItem="936-kN-eOC" secondAttribute="leading" constant="10" id="F8X-RV-D4k"/>
+                            <constraint firstAttribute="bottom" secondItem="Z9w-L5-tp3" secondAttribute="bottom" constant="10" id="xc7-ec-pVa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="936-kN-eOC" secondAttribute="bottom" constant="10" id="0dW-OH-nDp"/>
+                    <constraint firstItem="936-kN-eOC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sMh-8g-iFy"/>
+                    <constraint firstItem="936-kN-eOC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uyY-FG-ljA"/>
+                    <constraint firstAttribute="trailing" secondItem="936-kN-eOC" secondAttribute="trailing" constant="10" id="va7-bz-MAD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnDeletePinDetails" destination="ixX-It-xg4" id="WUJ-uj-h8t"/>
+                <outlet property="lblDescription" destination="ytV-3M-fBl" id="7Sv-pv-jbY"/>
+                <outlet property="lblTitle" destination="8wI-oe-aJ6" id="JcQ-MH-NDw"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="44"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DeletePinDetails" width="35" height="35"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
